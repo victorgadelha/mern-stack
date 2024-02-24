@@ -3,9 +3,8 @@ const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000;
 
 const app = express();
+const goalRoutes = require('./routes/goalRoutes');
 
-app.get('/api/goals', (req, res) => {
-  res.status(200).json({ message: 'get goals' });
-});
+app.use('/api/goals', goalRoutes);
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
