@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const Goal = require('../models/goalModule');
+const Goal = require('../models/goalModel');
 
 // @desc Get goals
 // @route GET /api/goals
@@ -46,7 +46,7 @@ const updateGoal = asyncHandler(async (req, res) => {
   res.status(200).json(updatedGoal);
 });
 
-// @desc Delete goals
+// @desc Delete goaDls
 // @route DELETE /api/goals
 // @access Private
 
