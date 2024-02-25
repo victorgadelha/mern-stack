@@ -70,13 +70,11 @@ const loginUser = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error('Invalid credentials');
   }
-
-  res.json({ message: 'Login User' });
 });
 
 // @desc Get user data
 // @route GET /api/users/me
-// @access Public
+// @access Private
 
 const getMe = asyncHandler(async (req, res) => {
   res.json({ message: 'User data display' });
